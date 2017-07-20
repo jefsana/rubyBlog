@@ -1,0 +1,23 @@
+// 1) Iniciando Servidor Rails
+$ rails server
+
+// 2) Criando a aplicação rubyBlog
+$ rails new rubyBlog
+
+
+// 3) Agora iremos executar uma tarefa  rake. Ela se comunica com o banco de dados e emite todos os comandos necessários para preparar os bancos de dados. No terminal devemos digitar o seguinte comando:
+$rake db:create
+
+
+// 4) Ainda que no momento estamos preocupados apenas com o ambiente de desenvolvimento, não há nenhum problema em criar os outros bancos de dados. Iremos criar mais dois baco de dados, um para o ambiente de teste e outro para o de produção.
+$rake db:crate:all
+
+
+// 5) Para confirmar a criação do banco de dados utilizaremos o rails dbconsole para verificar os bancos de dados atualmente existentes no sistema:
+$rails dbconsole
+
+// 6) Para testar se a conexão está funcionando, executando o seguinte comando:
+$rake db:migrate
+
+// 7) Agora iremos executar o gerador para criar nosso primeiro model, Article:
+$rails generate model Article
